@@ -1,19 +1,28 @@
-*, body {
+*{
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.575);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+body {
     margin: 0;
     padding: 0;
     box-sizing:border-box ;
-    background-color: #e2a966;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: rgb(255, 255, 255);
     display: flex;
     height: 98vh;
     align-items: center;
     justify-content: center;
-    
+    background-image:  url("1.jpg");
 }
 
 h2 {
     background-color: transparent;
+    background-image: none;
 }
 
 #home-view{
@@ -23,6 +32,7 @@ h2 {
     height: 20em;
     padding-left: 10em;
     background-color: rgba(0, 0, 0, 0.397);
+    background-image: none;    
 }
 
 .container-centro{
