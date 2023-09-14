@@ -1,6 +1,4 @@
 *{
-    background-image: none;
-    background-color: rgba(0, 0, 0, 0.575);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-position: center;
@@ -8,31 +6,73 @@
 }
 
 body {
-    margin: 0;
+    margin: auto;
     padding: 0;
-    box-sizing:border-box ;
+    box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.575);
+    height: 100vh;
     display: flex;
-    height: 98vh;
     align-items: center;
     justify-content: center;
     background-image:  url("1.jpg");
 }
 
-h2 {
-    background-color: transparent;
-    background-image: none;
+a{
+  text-decoration: none;
+  color: #ffff;
 }
+
+/*-----------------------argumentos do Header-----------------------*/
+
+#nav-bar {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  z-index: 100;
+  outline: 2px solid rgb(255, 255, 255);
+}
+
+.nav-button{
+  cursor: pointer;
+  font-family: fantasy;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px 20px 10px 20px;
+  transition:all 0.25s ease-out;
+}
+
+#logo{
+  font-family: fantasy;
+  font-size: 50px;
+  width: 300px;
+  margin: 0px;
+  color: #d80016;
+  transition:all 0.25s ease-out;
+}
+
+#logo:hover{
+  transform:scale(1.03) scale(1);
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+}
+
+/*-----------------------argumentos da HomeView-----------------------*/
 
 #home-view{
     display: flex;
     justify-content: left;
-    width: 70em;
-    height: 20em;
     padding-left: 10em;
     background-color: rgba(0, 0, 0, 0.397);
-    background-image: none;    
+    outline: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.692);
 }
 
 .container-centro{
@@ -41,23 +81,79 @@ h2 {
   align-items: center;
   width: 30em;
   height: 20em;
-  background-color: #88ff0093;
   color: white;
-  margin-left: 30px;
-}
-
-
-
-/*-----------------------argumentos de texto-----------------------*/
-
-#título{
-  font-size: 30px;
-  text-align: center;
   background-color: transparent;
 }
 
-#subtítulo{
-    text-align: center;
-    background-color: transparent;
-    margin-left: 10px;
+#button-start {
+  cursor: pointer;
+  outline: 2px solid rgb(255, 255, 255);
+  font-family: fantasy;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  transition:all 0.25s ease-out;
+}
+
+#button-start:hover {
+  transform: scale(1.03);
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  color: #d80016;
+  outline-color: #d80016;
+}
+
+/*-----------------------argumentos do Footer-----------------------*/
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+  z-index: 100;
+}
+/*-----------------------argumentos de texto-----------------------*/
+
+#titulo{
+  font-family: fantasy;
+  font-size: 130px;
+  width: 300px;
+  margin: 0px;
+  color: #d80016;
+  animation: deslizar 1s;
+  transition:all 0.25s ease-out;
+}
+
+#titulo:hover{
+  transform:scale(1.03);
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+}
+
+
+@keyframes deslizar{
+  0% {
+    transform: translateX(-5em);
+    opacity: 0%;
+}
+100% {
+    transform: translateX(0);
+    opacity: 100%;
+}
+}
+
+@keyframes fade-out{
+  0% {
+    opacity: 100%;
   }
+  100%{
+    opacity: 0%;
+  }
+}
+
+
