@@ -1,35 +1,22 @@
- /$$$$$$$                                     /$$                      /$$$$$$                     
-| $$__  $$                                   | $$                     /$$__  $$                    
-| $$  \ $$ /$$$$$$   /$$$$$$  /$$  /$$$$$$  /$$$$$$    /$$$$$$       | $$  \ $$ /$$$$$$$   /$$$$$$ 
-| $$$$$$$//$$__  $$ /$$__  $$|__/ /$$__  $$|_  $$_/   /$$__  $$      | $$  | $$| $$__  $$ /$$__  $$
-| $$____/| $$  \__/| $$  \ $$ /$$| $$$$$$$$  | $$    | $$  \ $$      | $$  | $$| $$  \ $$| $$$$$$$$
-| $$     | $$      | $$  | $$| $$| $$_____/  | $$ /$$| $$  | $$      | $$  | $$| $$  | $$| $$_____/
-| $$     | $$      |  $$$$$$/| $$|  $$$$$$$  |  $$$$/|  $$$$$$/      |  $$$$$$/| $$  | $$|  $$$$$$$
-|__/     |__/       \______/ | $$ \_______/   \___/   \______/        \______/ |__/  |__/ \_______/
-                        /$$  | $$                                                                  
-                       |  $$$$$$/                                   *o nome é temporário                               
-                        \______/                  
+<h1>🧩Projeto One</h1>
 
-
+<h2>Descrição Geral</h2>
 Vamos desenvolver nosso primeiro site!
-Neste projeto, aplicaremos conhecimentos de CSS, HTML e JavaScript, bem como práticas comuns de Git e GitHub.
+Neste projeto, aplicaremos conhecimentos de CSS, HTML e JavaScript, bem como práticas comuns de Git e GitHub, buscando a construção de um site que irá gerar os papers customizados para criação de personagens de **RPG**.
 
-========================----Objetivos----==========================
-= Documentar nosso progresso como Devs;                           =
-= Aprender na prática boas técnicas de organização;               =
-= Expandir conhecimento na área;                                  =
-= Se divertir!                                                    =
--------------------------------------------------------------------
+<h2>💎Objetivos</h2>
 
- ________  ________           _________  ___  ___  _______           ________  ________      ___    ___ ________      
-|\   __  \|\   ____\         |\___   ___\\  \|\  \|\  ___ \         |\   __  \|\   __  \    |\  \  /  /|\   ____\     
-\ \  \|\  \ \  \___|_        \|___ \  \_\ \  \\\  \ \   __/|        \ \  \|\ /\ \  \|\  \   \ \  \/  / | \  \___|_    
- \ \  \\\  \ \_____  \            \ \  \ \ \   __  \ \  \_|/__       \ \   __  \ \  \\\  \   \ \    / / \ \_____  \   
-  \ \  \\\  \|____|\  \            \ \  \ \ \  \ \  \ \  \_|\ \       \ \  \|\  \ \  \\\  \   \/  /  /   \|____|\  \  
-   \ \_______\____\_\  \            \ \__\ \ \__\ \__\ \_______\       \ \_______\ \_______\__/  / /       ____\_\  \ 
-    \|_______|\_________\            \|__|  \|__|\|__|\|_______|        \|_______|\|_______|\___/ /       |\_________\
-             \|_________|                                                                  \|___|/        \|_________|
-                                                                                                                                                                                                     
--Augusto Pasinatto
--Alexandre Veadrigo Junior
--Guilherme Gabriel Fochezatto
+* **Documentar** nosso progresso como Devs
+* **Aprender** na prática boas técnicas de organização em equipe
+* **Expandir** conhecimento na área
+* Se **divertir**, tornando o processo de aprendizagem agradável e gratificante
+
+
+<h2>🫱🏼‍🫲🏽Autores</h2>	  
+
+- <h3>Augusto Pasinatto</h3>
+
+- <h3>Alexandre Veadrigo Júnior</h3>
+
+- <h3>Guilherme Gabriel Fochezatto</h3>
+
