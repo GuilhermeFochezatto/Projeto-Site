@@ -2,9 +2,52 @@
     margin: 0;
     padding: 0;
     box-sizing:border-box ;
+    background-color: #e2a966;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    display: flex;
+    height: 98vh;
+    align-items: center;
+    justify-content: center;
     
 }
 
-* {
-    background-color: #454343;
+h2 {
+    background-color: transparent;
 }
+
+#home-view{
+    display: flex;
+    justify-content: left;
+    width: 70em;
+    height: 20em;
+    padding-left: 10em;
+    background-color: rgba(0, 0, 0, 0.397);
+}
+
+.container-centro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30em;
+  height: 20em;
+  background-color: #88ff0093;
+  color: white;
+  margin-left: 30px;
+}
+
+
+
+/*-----------------------argumentos de texto-----------------------*/
+
+#título{
+  font-size: 30px;
+  text-align: center;
+  background-color: transparent;
+}
+
+#subtítulo{
+    text-align: center;
+    background-color: transparent;
+    margin-left: 10px;
+  }
