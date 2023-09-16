@@ -31,21 +31,36 @@ startButton.addEventListener('click', function() {
     `;
     container.appendChild(buttons);
 
+    function escondeElementos() {
+        homeview.style.animation = 'fade-out 0.5s'; //frescura 1
+        homeview.style.animationFillMode = 'forwards'; //frescura 2
+        setTimeout(function() {
+            homeview.addEventListener('animationend', (event) => {homeview.style.display = 'none'}); //Some da tela após acabar a frescura
+        }, 200);
+    }
+
     /* aqui são os argumentos relacionados aos botões da nova UI */
-    /* está em time-out pois não identifica os botões recém criados se carregado junto com clique do botão "Start" */
+    /* está em time-out pois não identifica os elementos recém criados se carregado junto com clique do botão "Start" */
     setTimeout(function() {
         const submits = document.getElementsByClassName('submit');
-        for (const submit of submits) {
-            submit.addEventListener('click', function() {
-                homeview.style.animation = 'fade-out 0.5s'; //frescura 1
-                homeview.style.animationFillMode = 'forwards'; //frescura 2
-                setTimeout(function() {
-                    homeview.addEventListener('animationend', (event) => {homeview.style.display = 'none'}); //Some da tela após acabar a frescura
-                }, 200);
+        const textfields = document.getElementsByClassName('textfield');
+
+        for (const textfield of textfields) {
+        textfield.addEventListener('keydown', function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); // Evita o envio do formulário
+                escondeElementos();
+                }
             });
         }
-    }, 100);
 
+        for (const submit of submits) {
+            submit.addEventListener('click', function() {
+                escondeElementos();
+            });
+        }
+
+    }, 100);
 
 
 });
