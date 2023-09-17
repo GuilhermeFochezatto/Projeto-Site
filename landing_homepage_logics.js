@@ -31,6 +31,7 @@ startButton.addEventListener('click', function() {
     `;
     container.appendChild(buttons);
 
+    /* função que será chamada ao momento do login */
     function escondeElementos() {
         homeview.style.animation = 'fade-out 0.5s'; //frescura 1
         homeview.style.animationFillMode = 'forwards'; //frescura 2
@@ -61,7 +62,6 @@ startButton.addEventListener('click', function() {
         }
 
     }, 100);
-
 
 });
 

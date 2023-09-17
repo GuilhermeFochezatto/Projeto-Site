@@ -16,7 +16,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image:  url("1.jpg");
+    background-image:  url("images/landing_homepage_images/1.jpg");
 }
 
 a{
@@ -81,14 +81,15 @@ h2{
 
 #home-view{
     width: 50em;
-    height: 20em;
+    height: 30em;
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    align-content: center;
     padding-left: 10em;
     background-color: rgba(0, 0, 0, 0.397);
-    outline: 1px solid rgb(255, 255, 255);
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.692);
+    outline: 2px solid rgb(255, 112, 112);
+    border-radius: 30px;
+    box-shadow: 1px 1px 50px 1px rgba(255, 0, 0, 0.692);
 }
 
 #container-centro{
@@ -96,7 +97,7 @@ h2{
   justify-content: center;
   align-items: center;
   width: 30em;
-  height: 20em;
+  height: auto;
   color: white;
   background-color: transparent;
   margin-right: 5em;
@@ -106,7 +107,10 @@ h2{
 
 #button-start {
   cursor: pointer;
-  outline: 2px solid rgb(255, 255, 255);
+  outline: 2px solid rgb(252, 221, 221);
+  box-shadow: 1px 1px 15px 1px rgba(255, 255, 255, 0.692);
+  color: rgb(247, 235, 236);
+  border-radius: 4px;
   font-family: fantasy;
   font-size: 24px;
   text-align: center;
@@ -121,13 +125,17 @@ h2{
   -webkit-transition: all 0.1s ease-out;
   color: #d80016;
   outline-color: #d80016;
+  box-shadow: 1px 1px 20px 1px rgba(255, 0, 0, 0.692);
+
 }
 
 
 #titulo{
   font-family: fantasy;
   font-size: 130px;
+  align-self: center;
   width: 300px;
+  height: auto;
   margin: 0px;
   color: #d80016;
   animation: deslizar 1s;
@@ -139,6 +147,7 @@ h2{
   transition: all 0.1s;
   -moz-transition: all 0.1s ease-out;
   -webkit-transition: all 0.1s ease-out;
+  cursor: default;
 }
 /*-----------------------argumentos do Login-----------------------*/
 
