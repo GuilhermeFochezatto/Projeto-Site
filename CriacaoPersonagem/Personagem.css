@@ -1,0 +1,144 @@
+*{
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+body {
+    margin: auto;
+    padding: 1em 0 0em 0em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.466);
+    height: 100vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-image:  url("../images/CriacaoPersonagem/background.jpg");
+    background-attachment: fixed;
+}
+
+a{
+  text-decoration: none;
+  color: #ffff;
+}
+
+li{
+  list-style-type: none;
+}
+
+h2{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+label{
+  font-size: large;
+  text-transform:capitalize;
+}
+
+.textfield{
+  background-color: rgba(0, 0, 0, 0.397);
+  border-style: none;
+  width: 250px;
+  height: 30px;
+  font-size: large;
+  font-family: fantasy;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  color: #ffff;
+}
+
+.submit{
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.397);
+  font-family: fantasy;
+  transition:all 0.25s ease-out;
+  font-size: large;
+  border: none;
+  cursor: pointer;
+  color: #ffff;
+}
+
+.submit:hover {
+  transform: scale(1.03);
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  color: #d80016;
+  outline: 2px solid#d80016;
+}
+
+/*-----------------------argumentos do Header-----------------------*/
+
+#nav-bar {
+  display: flex;
+  width: 100%;
+  font-family: fantasy;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.575);
+  box-shadow: 1px 1px 50px 30px rgba(0, 0, 0, 0.575);
+  transition:all 0.25s ease-out;
+  z-index: 100;
+
+}
+
+.nav-button{
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 20px 5px 20px;
+}
+
+#logo{
+  font-size: 50px;
+  width: 300px;
+  margin: 0px;
+  color: #d80016;
+}
+
+#logo:hover{
+  transform:scale(1.03) scale(1);
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+}
+
+/*-----------------------argumentos da área da ficha-----------------------*/
+
+.area {
+  position: absolute;
+  text-align: center;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.397);
+  outline: 2px solid rgb(252, 221, 221);
+  border-radius: 5px;
+  left: 2em;
+  top: 7em
+}
+
+
+.statsfield {
+  background-color: rgba(0, 0, 0, 0.397);
+  border-style: none;
+  text-align: center;
+  width: 4em;
+  height: 60px;
+  font-size: 30px;
+  font-family: fantasy;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  color: #ffc400;
+
+}
+
+.mod{
+    background-color: rgba(0, 0, 0, 0.397);
+    border-style: none;
+    width: 30px;
+    font-size: 24px;
+    font-family: fantasy;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    color:#ffc400;
+}
