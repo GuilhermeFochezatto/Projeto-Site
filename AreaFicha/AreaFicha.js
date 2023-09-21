@@ -1,5 +1,5 @@
 // Make the DIV element draggable:
-var divs = document.getElementsByClassName("area")
+var divs = document.getElementsByClassName("dragarea")
 
 Array.from(divs).forEach(element => {
   dragElement(element);
@@ -12,7 +12,7 @@ function dragElement(elmnt) {
 
   function dragMouseDown(e) {
     // Verifique se o elemento clicado não é o elemento com a classe "statsfield"
-    if (!e.target.classList.contains('statsfield')) {
+    if (!e.target.classList.contains('statsfield') && !e.target.classList.contains('mod')) {
       // Inicializa as posições iniciais do mouse
       pos3 = e.clientX;
       pos4 = e.clientY;
@@ -41,4 +41,5 @@ function dragElement(elmnt) {
     document.removeEventListener('mouseup', closeDragElement);
     document.removeEventListener('mousemove', elementDrag);
   }
+
 }

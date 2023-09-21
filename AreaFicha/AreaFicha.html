@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>AUTO D&D</title>
 
-    <link rel="stylesheet" href="Personagem.css">  
+    <link rel="stylesheet" href="AreaFicha.css">  
 
 </head>
 <body>
@@ -13,61 +13,61 @@
     <div id="nav-bar">
         <a href="../landing_homepage.html" id="logo">AUTO D&D</a>
         <ul style="display: flex; padding-inline-start: 10px;">
-        <li><a class="nav-button" href="../CriacaoPersonagem/Personagem.html">FICHA</a></li>
+        <li><a class="nav-button" href="../AreaFicha/AreaFicha.html">FICHA</a></li>
         <li><a class="nav-button" href="">BOTAO 1</a></li>
         <li><a class="nav-button" href="">BOTAO 1</a></li>
         <li><a class="nav-button" href="">BOTAO 1</a></li>
         </ul>
     </div>
 
-    <div class="area" id="atribute">
+    <div class="dragarea" id="atribute">
         <h2>FORÇA</h2>
-        <input type="text" class="statsfield">
+        <input type="text" id="strv">
         <br>
-        <input type="text" class="statsfield">
+        <input type="text" id="strm">
         <h2>DESTREZA</h2>
-        <input type="text" class="statsfield">
+        <input type="text" id="dexv">
         <br>
-        <input type="text" class="statsfield">
+        <input type="text" id="dexm">
         <h2>CONSTITUIÇÃO</h2>
-        <input type="text" class="statsfield">
+        <input type="text" id="conv">
         <br>
-        <input type="text" class="statsfield">
+        <input type="text" id="conm">
         <h2>INTELIGÊNCIA</h2>
-        <input type="text" class="statsfield">
+        <input type="text" id="intelv">
         <br>
-        <input type="text" class="statsfield">
+        <input type="text" id="intelm">
         <h2>SABEDORIA</h2>
-        <input type="text" class="statsfield">
+        <input type="text" id="wisv">
         <br>
-        <input type="text" class="statsfield">
+        <input type="text" id="wism">
         <h2>CARISMA</h2>
-        <input type="text" class="statsfield">
+        <input type="text" id="charv">
         <br>
-        <input type="text" class="statsfield">
+        <input type="text" id="charm">
     </div>
 
-    <div class="area" id="profi" style="left: 16em">
+    <div class="dragarea" id="profi" style="left: 16em">
+        <h2>FORÇA</h2>
        <ul style="font-size: 26px; letter-spacing: 1px; padding: 0; margin: 0;">
-       <input type="text" class="mod">
+       <input type="text">  
        <input type="checkbox">
        <label for="checkbox">acrobacia</label>
        <br>
-       <input type="text" class="mod">
+       <input type="text">
        <input type="checkbox">
        <label for="checkbox">acrobacia</label>
        <br>
-       <input type="text" class="mod">
+       <input type="text">
        <input type="checkbox">
        <label for="checkbox">acrobacia</label>
        <br>
-       <input type="text" class="mod">
+       <input type="text">
        <input type="checkbox">
        <label for="checkbox">acrobacia</label>
         </ul>
-        <input type="button" value="HIDDEN" class="submit" id="hidden">
+        <input type="button" value="HIDDEN">
     </div>
-
-    <script src="Personagem.js"></script>  
+    <script src="AreaFicha.js"></script>  
 </body>
 </html>

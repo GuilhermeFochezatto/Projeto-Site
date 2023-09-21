@@ -20,18 +20,18 @@ startButton.addEventListener('click', function() {
     const buttons = document.createElement("div");
     buttons.innerHTML = `
     <h2>Usuário</h2>
-    <input type="text" class="textfield" id="user">
+    <input type="text" id="user">
     <br>
     <br> 
     <h2>Senha</h2>
-    <input type="password" class="textfield" id="pass">
+    <input type="password" id="pass">
     <br>
-    <input type="button" class="submit" id="login" value="LOGIN">
-    <input type="button" class="submit" id="register" value="REGISTRE-SE">
+    <input type="button" id="login" value="LOGIN">
+    <input type="button" id="register" value="REGISTRE-SE">
     `;
     container.appendChild(buttons);
 
-    /* função que será chamada ao momento do login */
+    /* função que será chamada ao momento do login (função para testar os botões e o pressionar da tecla enter)*/
     function escondeElementos() {
         homeview.style.animation = 'fade-out 0.5s'; //frescura 1
         homeview.style.animationFillMode = 'forwards'; //frescura 2
@@ -43,23 +43,24 @@ startButton.addEventListener('click', function() {
     /* aqui são os argumentos relacionados aos botões da nova UI */
     /* está em time-out pois não identifica os elementos recém criados se carregado junto com clique do botão "Start" */
     setTimeout(function() {
-        const submits = document.getElementsByClassName('submit');
-        const textfields = document.getElementsByClassName('textfield');
+        const login = document.getElementById('login');
+        const pass = document.getElementById('pass');
+        const register = document.getElementById('register');
 
-        for (const textfield of textfields) {
-        textfield.addEventListener('keydown', function(event) {
+            pass.addEventListener('keydown', function(event) {
             if (event.key === "Enter") {
                 event.preventDefault(); // Evita o envio do formulário
                 escondeElementos();
                 }
             });
-        }
-
-        for (const submit of submits) {
-            submit.addEventListener('click', function() {
+        
+            login.addEventListener('click', function() {
                 escondeElementos();
             });
-        }
+
+            register.addEventListener('click', function() {
+                escondeElementos();
+            });
 
     }, 100);
 
