@@ -19,8 +19,10 @@
         <li><a class="nav-button" href="">BOTAO 1</a></li>
         </ul>
     </div>
-
-    <div class="dragarea" id="atribute">
+    
+    <!--div responsável por: barra de atributos-->
+    <div class="dragarea" id="ATRIBUTOS" style="top: 109px; left: 14px;">
+        <input type="button" value="Mostrar" class="show">
         <h2>FORÇA</h2>
         <input type="text" id="strv">
         <br>
@@ -41,33 +43,166 @@
         <input type="text" id="wisv">
         <br>
         <input type="text" id="wism">
-        <h2>CARISMA</h2>
+        <h2>CARISMA</h2> 
         <input type="text" id="charv">
         <br>
         <input type="text" id="charm">
+        <br>
+        <input type="button" value="---" class="hidden">
     </div>
 
-    <div class="dragarea" id="profi" style="left: 16em">
+    <!--div responsável por: perícias de força -->
+    <div class="dragarea" id="FORÇA" style="left: 179px; top: 110px;">
+        <input type="button" value="Mostrar" class="show">
         <h2>FORÇA</h2>
-       <ul style="font-size: 26px; letter-spacing: 1px; padding: 0; margin: 0;">
-       <input type="text">  
-       <input type="checkbox">
-       <label for="checkbox">acrobacia</label>
-       <br>
-       <input type="text">
-       <input type="checkbox">
-       <label for="checkbox">acrobacia</label>
-       <br>
-       <input type="text">
-       <input type="checkbox">
-       <label for="checkbox">acrobacia</label>
-       <br>
-       <input type="text">
-       <input type="checkbox">
-       <label for="checkbox">acrobacia</label>
+        <ul style="font-size: 12px; letter-spacing: 1px; padding: 0; margin: 0; text-align: justify;">
+            <input type="text">  
+            <input type="checkbox">
+            <label for="checkbox">Atletismo</label>
+        <br>
+            <input type="text">
+            <input type="checkbox">
+            <label for="checkbox">Salvaguarda</label>
+        <br>
         </ul>
-        <input type="button" value="HIDDEN">
+        <input type="button" value="---" class="hidden">
     </div>
+
+    <!--div responsável por: perícias de destreza -->
+    <div class="dragarea" id="DESTREZA" style="left: 178px; top: 275px;">
+        <input type="button" value="Mostrar" class="show">
+        <h2>DESTREZA</h2>
+        <ul style="font-size: 12px; letter-spacing: 1px; padding: 0; margin: 0; text-align: justify;">
+            <input type="text">  
+            <input type="checkbox">
+            <label for="checkbox">Acrobacia</label>
+        <br>
+            <input type="text">
+            <input type="checkbox">
+            <label for="checkbox">Furtividade</label>
+        <br>
+        <input type="text">
+        <input type="checkbox">
+        <label for="checkbox" style="font-size: 13px;">Prestidigitação</label>
+        <br>
+            <input type="text">
+            <input type="checkbox">
+            <label for="checkbox">Salvaguarda</label>
+        <br>
+        </ul>
+        <input type="button" value="---" class="hidden">
+    </div>
+
+    <!--div responsável por: perícias de constituição -->
+    <div class="dragarea" id="CONSTITUIÇÃO" style="left: 178px; top: 515px;">
+        <input type="button" value="Mostrar" class="show">
+        <h2>CONSTITUIÇÃO</h2>
+        <ul style="font-size: 12px; letter-spacing: 1px; padding: 0; margin: 0; text-align: justify;">
+            <input type="text">
+            <input type="checkbox">
+            <label for="checkbox">Salvaguarda</label>
+        <br>
+        </ul>
+        <input type="button" value="---" class="hidden">
+    </div>
+
+    <!--div responsável por: perícias de inteligência -->
+    <div class="dragarea" id="INTELIGÊNCIA" style="left: 179px; top: 644px;">
+        <input type="button" value="Mostrar" class="show">
+        <h2>INTELIGÊNCIA</h2>
+        <ul style="font-size: 12px; letter-spacing: 1px; padding: 0; margin: 0; text-align: justify;">
+            <input type="text">  
+            <input type="checkbox">
+            <label for="checkbox">Arcanismo</label>
+        <br>
+            <input type="text">
+            <input type="checkbox">
+            <label for="checkbox">Historia</label>
+        <br>
+            <input type="text">  
+            <input type="checkbox">
+            <label for="checkbox" style="font-size: 15px;">Investigação</label>
+        <br>
+            <input type="text">
+            <input type="checkbox">
+            <label for="checkbox">Natureza</label>
+        <br>
+            <input type="text">
+            <input type="checkbox">
+            <label for="checkbox">Religiao</label>
+        <br>
+            <input type="text">
+            <input type="checkbox">
+            <label for="checkbox">Salvaguarda</label>
+        <br>
+        </ul>
+        <input type="button" value="---" class="hidden">
+    </div>
+
+    <!--div responsável por: perícias de sabedoria -->
+    <div class="dragarea" id="SABEDORIA" style="left: 389px; top: 110px;">
+        <input type="button" value="Mostrar" class="show">
+        <h2>SABEDORIA</h2>
+        <ul style="font-size: 12px; letter-spacing: 1px; padding: 0; margin: 0; text-align: justify;">
+            <input type="text">  
+            <input type="checkbox">
+            <label for="checkbox">Intuição</label>
+        <br>
+            <input type="text">
+            <input type="checkbox">
+            <label for="checkbox" style="font-size: 15px;">Lidar c/ Animais</label>
+        <br>
+            <input type="text">  
+            <input type="checkbox">
+            <label for="checkbox">Medicina</label>
+        <br>
+            <input type="text">
+            <input type="checkbox">
+            <label for="checkbox">Percepção</label>
+        <br>
+            <input type="text">
+            <input type="checkbox">
+            <label for="checkbox">Sobrevivência</label>
+        <br>
+            <input type="text">
+            <input type="checkbox">
+            <label for="checkbox">Salvaguarda</label>
+        <br>
+        </ul>
+        <input type="button" value="---" class="hidden">
+    </div>
+
+        <!--div responsável por: perícias de sabedoria -->
+        <div class="dragarea" id="CARISMA" style="left: 388px; top: 424px;"">
+            <input type="button" value="Mostrar" class="show">
+            <h2>CARISMA</h2>
+            <ul style="font-size: 12px; letter-spacing: 1px; padding: 0; margin: 0; text-align: justify;">
+                <input type="text">  
+                <input type="checkbox">
+                <label for="checkbox">Atuação</label>
+                
+            <br>
+                <input type="text">
+                <input type="checkbox">
+                <label for="checkbox">Enganação</label>
+            <br>
+                <input type="text">  
+                <input type="checkbox">
+                <label for="checkbox">Intimidação</label>
+            <br>
+                <input type="text">
+                <input type="checkbox">
+                <label for="checkbox">Persuasão</label>
+            <br>
+                <input type="text">
+                <input type="checkbox">
+                <label for="checkbox">Salvaguarda</label>
+            <br>
+            </ul>
+            <input type="button" value="---" class="hidden">
+        </div>
+
+
     <script src="AreaFicha.js"></script>  
 </body>
 </html>

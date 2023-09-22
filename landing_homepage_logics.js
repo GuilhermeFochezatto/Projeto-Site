@@ -36,7 +36,7 @@ startButton.addEventListener('click', function() {
         homeview.style.animation = 'fade-out 0.5s'; //frescura 1
         homeview.style.animationFillMode = 'forwards'; //frescura 2
         setTimeout(function() {
-            homeview.addEventListener('animationend', (event) => {homeview.style.display = 'none'}); //Some da tela após acabar a frescura
+            homeview.addEventListener('animationend', (event) => {homeview.style.visibility = 'hidden'}); //Some da tela após acabar a frescura
         }, 200);
     }
 

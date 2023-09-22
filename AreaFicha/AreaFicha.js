@@ -1,8 +1,18 @@
 // Make the DIV element draggable:
-var divs = document.getElementsByClassName("dragarea")
+const divs = document.getElementsByClassName("dragarea");
+const buttonHide = document.getElementsByClassName("hidden");
+const show = document.getElementsByClassName("show");
 
 Array.from(divs).forEach(element => {
   dragElement(element);
+});
+
+Array.from(buttonHide).forEach(element => {
+  hide(element);
+});
+
+Array.from(show).forEach(element => {
+  mostraElemento(element);
 });
 
 function dragElement(elmnt) {
@@ -11,8 +21,8 @@ function dragElement(elmnt) {
   elmnt.addEventListener('mousedown', dragMouseDown);
 
   function dragMouseDown(e) {
-    // Verifique se o elemento clicado não é o elemento com a classe "statsfield"
-    if (!e.target.classList.contains('statsfield') && !e.target.classList.contains('mod')) {
+    // Verifique se o elemento clicado não é da classe dragarea
+    if (e.target.classList.contains('dragarea') || e.target.classList.contains('show') ) {
       // Inicializa as posições iniciais do mouse
       pos3 = e.clientX;
       pos4 = e.clientY;
@@ -42,4 +52,28 @@ function dragElement(elmnt) {
     document.removeEventListener('mousemove', elementDrag);
   }
 
+}
+
+function hide(elmnt){
+  const divPai = elmnt.parentNode;
+  const thisshow = divPai.getElementsByClassName("show");
+
+    elmnt.addEventListener('click', function() {
+      divPai.style.visibility = 'hidden';
+      Array.from(thisshow).forEach(element => {
+        element.value = divPai.id;
+        element.style.display = 'flex';
+        element.style.visibility = 'visible'
+      });
+    });
+}
+
+function mostraElemento(elmnt){
+  const divPai = elmnt.parentNode;
+  
+  elmnt.addEventListener('dblclick', function() {
+    divPai.style.visibility = 'visible';
+    elmnt.style.visibility = 'hidden';
+    elmnt.style.display = 'none';
+  });
 }

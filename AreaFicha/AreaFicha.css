@@ -31,6 +31,7 @@ li{
 h2{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 0;
+  font-size: 18px;
 }
 
 label{
@@ -120,22 +121,54 @@ input[type="text"] {
 .dragarea {
   position: absolute;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   padding: 1em;
   outline: 2px solid rgb(252, 221, 221);
   border-radius: 5px;
-  left: 2em;
-  top: 7em
+  left: 1em;
+  top: 7em;
+  z-index: 10;
 }
 
 
-#atribute input[type="text"]{
+#ATRIBUTOS input[type="text"]{
   width: 4em;
   height: 50px;
   font-size: 30px;
   text-align: center;
 }
 
-#profi input[type="text"] {
-    width: 30px;
+#FORÇA input[type="text"] {
+  width: 30px;
 }
 
+#DESTREZA input[type="text"] {
+  width: 30px;
+}
+
+#CONSTITUIÇÃO input[type="text"] {
+  width: 30px;
+}
+
+#INTELIGÊNCIA input[type="text"] {
+  width: 30px;
+}
+
+#SABEDORIA input[type="text"] {
+  width: 30px;
+}
+
+#CARISMA input[type="text"] {
+  width: 30px;
+}
+.show{
+  top: -10px;
+  left: 0;
+  position: absolute;
+  display: none;
+  margin: 0;
+  outline: 2px solid rgb(252, 221, 221);
+  border-radius: 5px;
+  z-index: 1;
+}
