@@ -2,6 +2,11 @@
 const divs = document.getElementsByClassName("dragarea");
 const buttonHide = document.getElementsByClassName("hidden");
 const show = document.getElementsByClassName("show");
+const valor = document.getElementsByClassName("valor");
+
+Array.from(valor).forEach(element => {
+  mod(element);
+});
 
 Array.from(divs).forEach(element => {
   dragElement(element);
@@ -75,5 +80,28 @@ function mostraElemento(elmnt){
     divPai.style.visibility = 'visible';
     elmnt.style.visibility = 'hidden';
     elmnt.style.display = 'none';
+  });
+}
+
+function mod(elmnt) {
+  const classePai = elmnt.parentNode.classList;
+  const nomemod = classePai + 'mod';
+
+  elmnt.addEventListener('keydown', function(event) {
+    if (event.key === "Tab")  {
+      const valorElmnt = parseInt(elmnt.value, 10);
+
+      const valorMod = Math.floor((valorElmnt - 10) / 2);
+      document.getElementById(nomemod).value = valorMod;
+      atribuiMod();
+      function atribuiMod(){
+        const textPericia = document.getElementsByClassName(classePai + 'per');
+        console.log(textPericia)
+        Array.from(textPericia).forEach(element => {
+          element.value = valorMod;
+        });
+        
+      }
+    }
   });
 }

@@ -35,7 +35,7 @@ h2{
 }
 
 label{
-  font-size: large;
+  font-size: 14px;
   text-transform:capitalize;
 }
 
@@ -123,12 +123,16 @@ input[type="text"] {
   text-align: center;
   align-items: center;
   justify-content: center;
-  padding: 1em;
+  padding: 5px;
   outline: 2px solid rgb(252, 221, 221);
   border-radius: 5px;
   left: 1em;
   top: 7em;
   z-index: 10;
+}
+
+.separador{
+  background-color: transparent;
 }
 
 
@@ -139,29 +143,14 @@ input[type="text"] {
   text-align: center;
 }
 
-#FORÇA input[type="text"] {
+#PERÍCIAS input[type="text"] {
   width: 30px;
 }
 
-#DESTREZA input[type="text"] {
+#SALVAGUARDAS input[type="text"] {
   width: 30px;
 }
 
-#CONSTITUIÇÃO input[type="text"] {
-  width: 30px;
-}
-
-#INTELIGÊNCIA input[type="text"] {
-  width: 30px;
-}
-
-#SABEDORIA input[type="text"] {
-  width: 30px;
-}
-
-#CARISMA input[type="text"] {
-  width: 30px;
-}
 .show{
   top: -10px;
   left: 0;
