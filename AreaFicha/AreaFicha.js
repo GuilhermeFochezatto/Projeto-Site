@@ -90,18 +90,36 @@ function mod(elmnt) {
   elmnt.addEventListener('keydown', function(event) {
     if (event.key === "Tab")  {
       const valorElmnt = parseInt(elmnt.value, 10);
-
       const valorMod = Math.floor((valorElmnt - 10) / 2);
+      const textPericia = document.getElementsByClassName(classePai + 'per');
+      
+
       document.getElementById(nomemod).value = valorMod;
-      atribuiMod();
-      function atribuiMod(){
-        const textPericia = document.getElementsByClassName(classePai + 'per');
-        console.log(textPericia)
-        Array.from(textPericia).forEach(element => {
+      atribuiModPer();
+      
+      function atribuiModPer(){
+
+        Array.from(textPericia).forEach((element, index )=> {
           element.value = valorMod;
-        });
-        
+          const checkboxes = element.parentNode.querySelectorAll('.check');
+          let check = checkboxes[index];
+          console.log(check)
+
+          check.addEventListener('change', function () {
+            let valorAtual = parseInt(textPericia[index].value, 10) || 0;
+          
+            if (this.checked) {
+              valorAtual += 2;
+            } else {
+              valorAtual -= 2;
+            }
+              textPericia[index].value = valorAtual;
+            });
+       });
+
       }
+
     }
   });
 }
+
