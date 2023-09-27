@@ -1,0 +1,288 @@
+*{
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+body {
+    margin: auto;
+    padding: 1em 0 0em 0em;
+    font-family: fantasy;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.575);
+    height: 100vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-image:  url("images/landing_homepage_images/2.jpg");
+    background-attachment: fixed;
+}
+
+a{
+  text-decoration: none;
+  color: #ffff;
+}
+
+ul{
+  display: flex;
+  padding-inline-start: 10px;
+}
+
+li{
+  list-style-type: none;
+}
+
+h2{
+  letter-spacing: 2px;
+}
+
+input[type="text"],input[type="password"] {
+  background-color: rgba(0, 0, 0, 0.397);
+  border-style: none;
+  font-size: 24px;
+  font-family: fantasy;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  color: #ffff;
+}
+
+input[type="button"]{
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.397);
+  font-family: fantasy;
+  transition:all 0.25s ease-out;
+  font-size: large;
+  border: none;
+  cursor: pointer;
+  color: #ffff;
+}
+
+input[type="button"]:hover {
+  transform: scale(1.03);
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  color: #d80016;
+  outline: 2px solid#d80016;
+}
+/*-----------------------argumentos do Header-----------------------*/
+
+#nav-bar {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.575);
+  box-shadow: 1px 1px 50px 30px rgba(0, 0, 0, 0.575);
+  transition:all 0.25s ease-out;
+  z-index: 100;
+
+}
+
+.nav-button{
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 20px 5px 20px;
+}
+
+.nav-button:hover{
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  color: #d80016;
+}
+
+#logo{
+  font-size: 50px;
+  width: 300px;
+  margin: 0px;
+  color: #d80016;
+}
+
+#logo:hover{
+  transform:scale(1.03) scale(1);
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+}
+
+/*-----------------------argumentos da HomeView-----------------------*/
+
+#home-view{
+    width: 100;
+    height: 20em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-left: 10em;
+    padding-bottom: 10em;
+    padding-top: 10em;
+    color: #ffff;
+  }
+
+#container-centro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30em;
+  margin-right: 5em;
+  transition: all 0.1s;
+  animation: fade-in 0.5s;
+}
+
+#button-start {
+  cursor: pointer;
+  outline: 2px solid rgb(252, 221, 221);
+  box-shadow: 1px 1px 15px 1px rgba(255, 255, 255, 0.692);
+  border-radius: 4px;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  transition:all 0.25s ease-out;
+}
+
+#button-start:hover {
+  transform: scale(1.03);
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  color: #d80016;
+  outline-color: #d80016;
+  box-shadow: 1px 1px 20px 1px rgba(255, 0, 0, 0.692);
+
+}
+
+#titulo{
+  font-size: 130px;
+  align-self: center;
+  width: 300px;
+  margin: 0px;
+  color: #d80016;
+  animation: deslizar 1s;
+  transition:all 0.25s ease-out;
+}
+
+#titulo:hover{
+  transform:scale(1.03);
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  cursor: default;
+}
+/*-----------------------argumentos do Login-----------------------*/
+.submit{
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.397);
+  transition:all 0.25s ease-out;
+  font-size: large;
+  border: none;
+  cursor: pointer;
+  color: #ffff;
+}
+
+.submit:hover {
+  transform: scale(1.03);
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  color: #d80016;
+  outline: 2px solid#d80016;
+}
+/*-----------------------argumentos do Corpo-----------------------*/
+#corpo{
+    display: grid;
+    width: 100%;
+    background-color: black;
+    box-shadow: 1px 1px 50px 30px black;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    column-gap: 150px;
+    row-gap: 100px;
+    padding-top: 100px;
+    letter-spacing: 2px;
+  }
+
+.parag{
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.img{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 500px;
+  height: 300px;
+  border-radius: 0px 60px 0px 60px;
+  border: 5px solid #ffffff;
+  box-shadow: 1px 1px 20px 1px rgba(255, 0, 0, 0.692);
+  background-image:  url("images/landing_homepage_images/2.jpg");
+}
+
+#img1{
+  grid-column-start: 2;
+  grid-row: 1;
+}
+
+#img2{
+  grid-row: 2;
+  grid-column-start: 1;
+  border-radius: 60px 0px 60px 0px;
+}
+
+#parag2{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 2;
+}
+
+/*-----------------------argumentos do Footer-----------------------*/
+
+#footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 1px 1px 50px 30px black;
+  color: white;
+  text-align: center;
+  z-index: 100;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*-----------------------Animações-----------------------*/
+
+@keyframes deslizar{
+
+  0% {
+    transform: translateX(-5em);
+    opacity: 0%;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+}
+
+}
+
+@keyframes fade-out{
+  0% {
+    opacity: 100%;
+  }
+  100%{
+    opacity: 0%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+  
+}
