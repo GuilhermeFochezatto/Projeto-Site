@@ -7,16 +7,16 @@
 
 body {
     margin: auto;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 1em 0 0em 0em;
+    font-family: fantasy;
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.575);
     height: 100vh;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
-    background-image:  url("images/landing_homepage_images/1.jpg");
+    background-image:  url("images/landing_homepage_images/2.jpg");
+    background-attachment: fixed;
 }
 
 a{
@@ -27,7 +27,6 @@ a{
 ul{
   display: flex;
   padding-inline-start: 10px;
-
 }
 
 li{
@@ -35,39 +34,70 @@ li{
 }
 
 h2{
-  margin: 0px;
+  letter-spacing: 2px;
+}
+
+input[type="text"],input[type="password"] {
+  background-color: rgba(0, 0, 0, 0.397);
+  border-style: none;
+  font-size: 24px;
+  font-family: fantasy;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  color: #ffff;
+}
+
+input[type="button"]{
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.397);
+  font-family: fantasy;
+  transition:all 0.25s ease-out;
+  font-size: large;
+  border: none;
+  cursor: pointer;
+  color: #ffff;
+}
+
+input[type="button"]:hover {
+  transform: scale(1.03);
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  color: #d80016;
+  outline: 2px solid#d80016;
 }
 /*-----------------------argumentos do Header-----------------------*/
 
 #nav-bar {
   display: flex;
-  position: fixed;
-  left: 0;
-  top: 0;
   width: 100%;
-  background-color: rgb(0, 0, 0);
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.575);
+  box-shadow: 1px 1px 50px 30px rgba(0, 0, 0, 0.575);
+  transition:all 0.25s ease-out;
   z-index: 100;
-  outline: 2px solid rgb(255, 255, 255);
+
 }
 
 .nav-button{
   cursor: pointer;
-  font-family: fantasy;
   font-size: 24px;
   text-align: center;
-  transition:all 0.25s ease-out;
-  display: inline;
   margin: 10px 20px 5px 20px;
 }
 
+.nav-button:hover{
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  color: #d80016;
+}
+
 #logo{
-  font-family: fantasy;
   font-size: 50px;
   width: 300px;
   margin: 0px;
   color: #d80016;
-  transition:all 0.25s ease-out;
 }
 
 #logo:hover{
@@ -80,28 +110,24 @@ h2{
 /*-----------------------argumentos da HomeView-----------------------*/
 
 #home-view{
-    width: 50em;
-    height: 30em;
+    width: 100;
+    height: 20em;
     display: flex;
     justify-content: center;
     align-content: center;
     padding-left: 10em;
-    background-color: rgba(0, 0, 0, 0.397);
-    outline: 2px solid rgb(255, 112, 112);
-    border-radius: 30px;
-    box-shadow: 1px 1px 50px 1px rgba(255, 0, 0, 0.692);
-}
+    padding-bottom: 10em;
+    padding-top: 10em;
+    color: #ffff;
+  }
 
 #container-centro{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30em;
-  height: auto;
-  color: white;
-  background-color: transparent;
   margin-right: 5em;
-  transition: all 0.1s; ;
+  transition: all 0.1s;
   animation: fade-in 0.5s;
 }
 
@@ -109,9 +135,7 @@ h2{
   cursor: pointer;
   outline: 2px solid rgb(252, 221, 221);
   box-shadow: 1px 1px 15px 1px rgba(255, 255, 255, 0.692);
-  color: rgb(247, 235, 236);
   border-radius: 4px;
-  font-family: fantasy;
   font-size: 24px;
   text-align: center;
   padding: 10px 20px 10px 20px;
@@ -129,13 +153,10 @@ h2{
 
 }
 
-
 #titulo{
-  font-family: fantasy;
   font-size: 130px;
   align-self: center;
   width: 300px;
-  height: auto;
   margin: 0px;
   color: #d80016;
   animation: deslizar 1s;
@@ -150,28 +171,14 @@ h2{
   cursor: default;
 }
 /*-----------------------argumentos do Login-----------------------*/
-
-.textfield{
-  background-color: rgba(0, 0, 0, 0.397);
-  border-style: none;
-  width: 250px;
-  height: 30px;
-  color: #ffff;
-  font-size: large;
-  font-family: fantasy;
-  letter-spacing: 2px;
-  margin-top: 5px;
-}
-
 .submit{
   margin-top: 10px;
   background-color: rgba(0, 0, 0, 0.397);
-  color: #fff;
-  font-family: fantasy;
   transition:all 0.25s ease-out;
   font-size: large;
   border: none;
   cursor: pointer;
+  color: #ffff;
 }
 
 .submit:hover {
@@ -182,17 +189,67 @@ h2{
   color: #d80016;
   outline: 2px solid#d80016;
 }
+/*-----------------------argumentos do Corpo-----------------------*/
+#corpo{
+    display: grid;
+    width: 100%;
+    background-color: black;
+    box-shadow: 1px 1px 50px 30px black;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    column-gap: 150px;
+    row-gap: 100px;
+    padding-top: 100px;
+    letter-spacing: 2px;
+  }
+
+.parag{
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.img{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 500px;
+  height: 300px;
+  border-radius: 0px 60px 0px 60px;
+  border: 5px solid #ffffff;
+  box-shadow: 1px 1px 20px 1px rgba(255, 0, 0, 0.692);
+  background-image:  url("images/landing_homepage_images/2.jpg");
+}
+
+#img1{
+  grid-column-start: 2;
+  grid-row: 1;
+}
+
+#img2{
+  grid-row: 2;
+  grid-column-start: 1;
+  border-radius: 60px 0px 60px 0px;
+}
+
+#parag2{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 2;
+}
+
 /*-----------------------argumentos do Footer-----------------------*/
 
 #footer {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: rgb(0, 0, 0);
+  box-shadow: 1px 1px 50px 30px black;
   color: white;
   text-align: center;
   z-index: 100;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /*-----------------------Animações-----------------------*/
@@ -229,6 +286,3 @@ h2{
   }
   
 }
-
-
-

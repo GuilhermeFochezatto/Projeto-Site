@@ -1,0 +1,163 @@
+*{
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+body {
+    margin: auto;
+    padding: 1em 0 0em 0em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.466);
+    height: 100vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-image:  url("../images/AreaFicha/background.jpg");
+    background-attachment: fixed;
+}
+
+a{
+  text-decoration: none;
+  color: #ffff;
+}
+
+li{
+  list-style-type: none;
+}
+
+h2{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  font-size: 18px;
+}
+
+label{
+  font-size: 14px;
+  text-transform:capitalize;
+}
+
+div{
+  background-color: rgba(0, 0, 0, 0.397);
+
+}
+
+input[type="button"]{
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.397);
+  font-family: fantasy;
+  transition:all 0.25s ease-out;
+  font-size: large;
+  border: none;
+  cursor: pointer;
+  color: #ffff;
+}
+
+input[type="button"]:hover {
+  transform: scale(1.03);
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  color: #d80016;
+  outline: 2px solid#d80016;
+}
+
+input[type="text"] {
+  background-color: rgba(0, 0, 0, 0.397);
+  border-style: none;
+  font-size: 24px;
+  font-family: fantasy;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  color: #ffc400;
+}
+
+/*-----------------------argumentos do Header-----------------------*/
+
+#nav-bar {
+  display: flex;
+  width: 100%;
+  font-family: fantasy;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.575);
+  box-shadow: 1px 1px 50px 30px rgba(0, 0, 0, 0.575);
+  transition:all 0.25s ease-out;
+  z-index: 100;
+
+}
+
+.nav-button{
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 20px 5px 20px;
+}
+
+.nav-button:hover{
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  color: #d80016;
+}
+
+#logo{
+  font-size: 50px;
+  width: 300px;
+  margin: 0px;
+  color: #d80016;
+}
+
+#logo:hover{
+  transform:scale(1.03) scale(1);
+  transition: all 0.1s;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+}
+
+/*-----------------------argumentos da área da ficha-----------------------*/
+
+.dragarea {
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  outline: 2px solid rgb(252, 221, 221);
+  border-radius: 5px;
+  left: 1em;
+  top: 7em;
+  z-index: 10;
+}
+
+.separador{
+  background-color: transparent;
+}
+
+
+#ATRIBUTOS input[type="text"]{
+  width: 4em;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#PERÍCIAS input[type="text"] {
+  width: 30px;
+}
+
+#SALVAGUARDAS input[type="text"] {
+  width: 30px;
+}
+
+.show{
+  top: -10px;
+  left: 0;
+  position: absolute;
+  display: none;
+  margin: 0;
+  outline: 2px solid rgb(252, 221, 221);
+  border-radius: 5px;
+  z-index: 1;
+}

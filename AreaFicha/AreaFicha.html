@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>AUTO D&D</title>
+
+    <link rel="stylesheet" href="AreaFicha.css">  
+
+</head>
+<body>
+
+    <!--div responsável por: barra de navegaçao, sempre na tela com atalahos pra cada sessão (ou as principais) -->
+    <div id="nav-bar">
+        <a href="../index.html" id="logo">AUTO D&D</a>
+        <ul style="display: flex; padding-inline-start: 10px;">
+        <li><a class="nav-button" href="../AreaFicha/AreaFicha.html">FICHA</a></li>
+        <li><a class="nav-button" href="">BOTAO 1</a></li>
+        <li><a class="nav-button" href="">BOTAO 1</a></li>
+        <li><a class="nav-button" href="">BOTAO 1</a></li>
+        </ul>
+    </div>
+    
+    <!--div responsável por: barra de atributos-->
+    <div class="dragarea" id="ATRIBUTOS" style="top: 100px; left: 18px; padding: 0.5em; height: 879px;">
+        <input type="button" value="Mostrar" class="show">
+        <div class="forca" style="background-color: transparent;">
+            <h2>FORÇA</h2>
+            <input type="text" class="valor">
+            <br>
+            <input type="text" id="forcamod" disabled>
+        </div>
+        <div class="destreza" style="background-color: transparent;">
+            <h2>DESTREZA</h2>
+            <input type="text" class="valor">
+            <br>
+            <input type="text" id="destrezamod" disabled>
+        </div>
+        <div class="constituicao" style="background-color: transparent;">
+            <h2>CONSTITUIÇÃO</h2>
+            <input type="text" class="valor">
+            <br>
+            <input type="text" id="constituicaomod" disabled>
+        </div>
+        <div class="inteligencia" style="background-color: transparent;">
+        <h2>INTELIGÊNCIA</h2>
+            <input type="text" class="valor">
+            <br>
+            <input type="text" id="inteligenciamod" disabled>
+        </div>
+        <div class="sabedoria" style="background-color: transparent;">
+            <h2>SABEDORIA</h2>
+            <input type="text" class="valor">
+            <br>
+            <input type="text" id="sabedoriamod" disabled>
+        </div>
+        <div class="carisma" style="background-color: transparent;">
+            <h2>CARISMA</h2> 
+            <input type="text" class="valor">
+            <br>
+            <input type="text" id="carismamod" disabled>
+        </div>
+        <br>
+        <input type="button" value="---" class="hidden">
+    </div>
+
+    <!--div responsável por: perícias -->
+    <div class="dragarea" id="PERÍCIAS" style="left: 165px; top: 100px; padding: 0.5em; height: 879px;">
+        <input type="button" value="Mostrar" class="show">
+        <h2>FORÇA</h2>
+        <ul style="font-size: 12px; letter-spacing: 1px; padding: 0; margin: 0; text-align: justify;">
+            <input type="text" class="forcaper" disabled> 
+            <input type="checkbox" class="check">
+            <label for="checkbox">Atletismo</label>
+            <br>
+        </ul>
+
+        <br>
+        <h2>DESTREZA</h2>
+        <ul style="font-size: 12px; letter-spacing: 1px; padding: 0; margin: 0; text-align: justify;">
+            <input type="text" class="destrezaper" disabled> 
+            <input type="checkbox" class="check">
+            <label for="checkbox">Acrobacia</label>
+            <br>
+            <input type="text" class="destrezaper" disabled> 
+            <input type="checkbox" class="check">
+            <label for="checkbox">Furtividade</label>
+            <br>
+            <input type="text" class="destrezaper" disabled> 
+            <input type="checkbox" class="check">
+            <label for="checkbox">Prestidigitação</label>
+            <br>
+        </ul>
+        <br>
+        <h2>INTELIGÊNCIA</h2>
+        <ul style="font-size: 12px; letter-spacing: 1px; padding: 0; margin: 0; text-align: justify;">
+            <input type="text" class="inteligenciaper" disabled>
+            <input type="checkbox" class="check">
+            <label for="checkbox">Arcanismo</label>
+            <br>
+            <input type="text" class="inteligenciaper" disabled>
+            <input type="checkbox" class="check">
+            <label for="checkbox">Historia</label>
+            <br>
+            <input type="text" class="inteligenciaper" disabled>
+            <input type="checkbox" class="check">
+            <label for="checkbox">Investigação</label>
+            <br>
+            <input type="text" class="inteligenciaper" disabled>
+            <input type="checkbox" class="check">
+            <label for="checkbox">Natureza</label>
+            <br>
+            <input type="text" class="inteligenciaper" disabled>
+            <input type="checkbox" class="check">
+            <label for="checkbox">Religiao</label>
+        </ul>
+        <br> 
+        <h2>SABEDORIA</h2>
+        <ul style="font-size: 12px; letter-spacing: 1px; padding: 0; margin: 0; text-align: justify;">
+            <input type="text" class="sabedoriaper" disabled>
+            <input type="checkbox" class="check">
+            <label for="checkbox">Intuição</label>
+            <br>
+            <input type="text" class="sabedoriaper" disabled>
+            <input type="checkbox" class="check">
+            <label for="checkbox">Lidar c/ Animais</label>
+            <br>
+            <input type="text" class="sabedoriaper" disabled>
+            <input type="checkbox" class="check">
+            <label for="checkbox">Medicina</label>
+            <br>
+            <input type="text" class="sabedoriaper" disabled>
+            <input type="checkbox" class="check">
+            <label for="checkbox">Percepção</label>
+            <br>
+            <input type="text" class="sabedoriaper" disabled>
+            <input type="checkbox" class="check">
+            <label for="checkbox">Sobrevivência</label>
+        </ul>
+        <br>
+        <h2>CARISMA</h2>
+            <ul style="font-size: 12px; letter-spacing: 1px; padding: 0; margin: 0; text-align: justify;">
+                <input type="text" class="carismaper" disabled>
+                <input type="checkbox" class="check">
+                <label for="checkbox">Atuação</label>
+                <br>
+                <input type="text" class="carismaper" disabled>
+                <input type="checkbox" class="check">
+                <label for="checkbox">Enganação</label>
+                <br>
+                <input type="text" class="carismaper" disabled>
+                <input type="checkbox" class="check">
+                <label for="checkbox">Intimidação</label>
+                <br>
+                <input type="text" class="carismaper" disabled>
+                <input type="checkbox" class="check">
+                <label for="checkbox">Persuasão</label>
+            </ul>
+        <input type="button" value="---" class="hidden">
+    </div>
+      
+    <!--div responsável por: salvaguardas -->
+    <div class="dragarea" id="SALVAGUARDAS" style="left: 370px; top: 100px; padding: 0.5em;">
+        <input type="button" value="Mostrar" class="show">
+        <h2>SALVAGUARDAS</h2>
+        <ul style="font-size: 12px; letter-spacing: 1px; padding: 0; margin: 0; text-align: justify;">
+            <input type="text" class="forcas" disabled>  
+            <input type="checkbox" class="check">
+            <label for="checkbox">Força</label>
+            <br>
+            <input type="text" class="destrezas" disabled>
+            <input type="checkbox" class="check">
+            <label for="checkbox">Destreza</label>
+            <br>
+            <input type="text" class="constituicaos" disabled>
+            <input type="checkbox" class="check">
+            <label for="checkbox">Constituição</label>
+            <br>
+            <input type="text" class="inteligencias" disabled>  
+            <input type="checkbox" class="check">
+            <label for="checkbox">Inteligência</label>
+            <br>
+            <input type="text" class="sabedorias" disabled>
+            <input type="checkbox" class="check">
+            <label for="checkbox">Sabedoria</label>
+            <br>
+            <input type="text" class="carismas" disabled>  
+            <input type="checkbox" class="check">
+            <label for="checkbox">Carisma</label>
+            <br>
+        </ul>
+        <input type="button" value="---" class="hidden">
+    </div>
+
+
+    <script src="AreaFicha.js"></script>  
+</body>
+</html>
