@@ -5,6 +5,14 @@ const show = document.getElementsByClassName("show");
 const valor = document.getElementsByClassName("valor");
 const textSalva = document.getElementsByClassName('salv');
 let contador = 0;
+const prof = document.getElementById("bonusprof");
+let bonusProf = parseInt(prof.value, 10) || 0;
+
+prof.addEventListener('change', function () {
+  bonusProf = parseInt(prof.value, 10) || 0;
+  console.log(bonusProf);
+})
+
 Array.from(valor).forEach(element => {
   mod(element);
 });
@@ -89,11 +97,10 @@ function mostraElemento(elmnt){
 
 function mod(elmnt) {
   const classePai = elmnt.parentNode.classList;
-  const nomemod = classePai + 'mod';
-  
+  const nomemod = classePai + 'mod';  
 
-  elmnt.addEventListener('keydown', function(event) {
-    if (event.key === "Tab")  {
+  elmnt.addEventListener('change', function() {
+    
       const valorElmnt = parseInt(elmnt.value, 10);
       const valorMod = Math.floor((valorElmnt - 10) / 2);
       const textPericia = document.getElementsByClassName(classePai + 'per');
@@ -112,11 +119,11 @@ function mod(elmnt) {
 
           check.addEventListener('change', function () {
             let valorAtual = parseInt(textPericia[index].value, 10) || 0;
-          
+            
             if (this.checked) {
-              valorAtual += 2;
+              valorAtual += bonusProf;
             } else {
-              valorAtual -= 2;
+              valorAtual -= bonusProf;
             }
               textPericia[index].value = valorAtual;
             });
@@ -134,12 +141,12 @@ function mod(elmnt) {
           let check = checkboxes[contador];
 
           check.addEventListener('change', function () {
-            let valorAtual = parseInt(textSalv[index].value, 10) || 0;
+            let valorAtual = parseInt(textSalv[index].value, ) || 0;
           
             if (this.checked) {
-              valorAtual += 2;
+              valorAtual += bonusProf;
             } else {
-              valorAtual -= 2;
+              valorAtual -= bonusProf;
             }
             textSalv[index].value = valorAtual;
             });
@@ -149,8 +156,7 @@ function mod(elmnt) {
 
 
       }
-
-    }
+    
 
   });
 }

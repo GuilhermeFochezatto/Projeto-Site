@@ -131,11 +131,6 @@ input[type="text"] {
   z-index: 10;
 }
 
-.separador{
-  background-color: transparent;
-}
-
-
 #ATRIBUTOS input[type="text"]{
   width: 4em;
   height: 50px;
@@ -149,6 +144,62 @@ input[type="text"] {
 
 #SALVAGUARDAS input[type="text"] {
   width: 30px;
+}
+
+#PROFICIÊCIA input[type="text"]{
+  width: 4em;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#INSPIRAÇÃO input[type="text"]{
+  width: 4em;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#OUTROS input[type="text"]{
+  width: 4em;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#OUTROS {
+  display: grid;
+  /* aqui eu determino é são 3 colunas de tamanhos iguas, cada coluna tem uma fração */
+  grid-template-columns: repeat(3, 1fr);
+  /* esssa é a altura das linhas, se vc quiser pode apaga-la caso não queira uma altura definida */
+  grid-auto-rows: auto;
+  /* espaço entre um elemento interno e outro */
+  grid-gap: 5px 8px;
+  /* margem interna que afasta os elementos da borda do grid */
+  padding: 20px 10px;
+  text-align: center;
+  align-items:end;
+}
+
+#COMBATE input[type="text"]{
+  width: 4em;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#COMBATE {
+  display: grid;
+  /* aqui eu determino é são 3 colunas de tamanhos iguas, cada coluna tem uma fração */
+  grid-template-columns: repeat(3, 1fr);
+  /* esssa é a altura das linhas, se vc quiser pode apaga-la caso não queira uma altura definida */
+  grid-auto-rows: auto;
+  /* espaço entre um elemento interno e outro */
+  grid-gap: 5px 8px;
+  /* margem interna que afasta os elementos da borda do grid */
+  padding: 20px 10px;
+  text-align: center;
+  align-items:end;
 }
 
 .show{
