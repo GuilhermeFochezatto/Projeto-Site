@@ -3,7 +3,8 @@ const divs = document.getElementsByClassName("dragarea");
 const buttonHide = document.getElementsByClassName("hidden");
 const show = document.getElementsByClassName("show");
 const valor = document.getElementsByClassName("valor");
-
+const textSalva = document.getElementsByClassName('salv');
+let contador = 0;
 Array.from(valor).forEach(element => {
   mod(element);
 });
@@ -19,6 +20,9 @@ Array.from(buttonHide).forEach(element => {
 Array.from(show).forEach(element => {
   mostraElemento(element);
 });
+
+
+
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -86,16 +90,18 @@ function mostraElemento(elmnt){
 function mod(elmnt) {
   const classePai = elmnt.parentNode.classList;
   const nomemod = classePai + 'mod';
+  
 
   elmnt.addEventListener('keydown', function(event) {
     if (event.key === "Tab")  {
       const valorElmnt = parseInt(elmnt.value, 10);
       const valorMod = Math.floor((valorElmnt - 10) / 2);
       const textPericia = document.getElementsByClassName(classePai + 'per');
-      
+      const textSalv = document.getElementsByClassName(classePai + 'salv');
 
       document.getElementById(nomemod).value = valorMod;
       atribuiModPer();
+      atribuiModSalv();
       
       function atribuiModPer(){
 
@@ -103,7 +109,6 @@ function mod(elmnt) {
           element.value = valorMod;
           const checkboxes = element.parentNode.querySelectorAll('.check');
           let check = checkboxes[index];
-          console.log(check)
 
           check.addEventListener('change', function () {
             let valorAtual = parseInt(textPericia[index].value, 10) || 0;
@@ -115,11 +120,38 @@ function mod(elmnt) {
             }
               textPericia[index].value = valorAtual;
             });
+
        });
+
+
+      }
+
+      function atribuiModSalv(){
+
+        Array.from(textSalv).forEach((element, index )=> {
+          element.value = valorMod;
+          const checkboxes = element.parentNode.querySelectorAll('.check');
+          let check = checkboxes[contador];
+
+          check.addEventListener('change', function () {
+            let valorAtual = parseInt(textSalv[index].value, 10) || 0;
+          
+            if (this.checked) {
+              valorAtual += 2;
+            } else {
+              valorAtual -= 2;
+            }
+            textSalv[index].value = valorAtual;
+            });
+
+            ++contador;
+       });
+
 
       }
 
     }
+
   });
 }
 
