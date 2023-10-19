@@ -96,70 +96,82 @@ function mostraElemento(elmnt){
 }
 
 //função que calcula os modificadores e os atribui nas perícias e salvaguardas (NÃO MEXER, ISSO TA UMA BAGUNÇA) 
+//este contador será importante mais para frente...
 let contador = 0;
 function mod(elmnt) {
+  //os elementos do valor da habilidade e o modificador estão dentro de uma div com seu respectivo nome.
+  //primeiro, chamamos essa div
   const classePai = elmnt.parentNode.classList;
-  const nomemod = classePai + 'mod'; 
+  //depois achamos o nome do campo do modificador, que nada mais é que o nome da div pai com o adicional 'mod'
+  const nomemod = classePai + 'mod';  
 
+  //Esta parte do código deverá sair, já que aqui eu aguardo pela mudança do valor do campo para fazer os cálculos.
   elmnt.addEventListener('change', function() {
+    //chamo o valor do campo como inteiro
     const valorElmnt = parseInt(elmnt.value, 10);
+    //calculo o valor do modificador
     const valorMod = Math.floor((valorElmnt - 10) / 2);
+    //chamo todos os campos de texto de perícia referentes à atual característica (Ex. carismaper = chama todas as perícias de carisma)
     const textPericia = document.getElementsByClassName(classePai + 'per');
+    //faço o mesmo para salvaguardas
     const textSalv = document.getElementsByClassName(classePai + 'salv');
-    const percep = document.getElementById('percep');
 
+    //atribui o valor do modificador calculado anteriormente ao campo com o nome antes carregado (nomemod)
     document.getElementById(nomemod).value = valorMod;
     atribuiModPer();
     atribuiModSalv();
-      
+    
+
     function atribuiModPer(){
+      //continuando no exemplo anterior, para cada elemento da classe 'carismaper'...
       Array.from(textPericia).forEach((element, index )=> {
+        //irá atribuir o valor do modificador atual aos elementos da classe
         element.value = valorMod;
+        //irá chamar todos os elementos checkboxes que estão dentro da mesma categoria (ex. carisma)
         const checkboxes = element.parentNode.querySelectorAll('.check');
+        //vai chamar apenas UM elemento checkbox, sendo esse referente ao respetivo index da query (ou seja, à sua respectiva ordem de aparição)
         let check = checkboxes[index];
 
-        if (nomemod == "sabedoriamod"){
-          percep.value = valorMod + 10;
-        }
-
+        //para este elemento, irá aguardar uma mudança...
         check.addEventListener('change', function () {
+          //guarda o valor atual do campo respectivo (AQUI ESTAMOS FALANDO DE NUMERAÇÃO/INDEX/ORDEM DE APARIÇÃO)
           let valorAtual = parseInt(textPericia[index].value, 10) || 0;
-            
+          
+          //se ESTE ESPECÍFICO checkbox for marcado, irá atribuir o valor de proficiência ao valor atual
+          //se for desmarcado, irá subtrair este mesmo valor (não é a melhor técnica, preciso mudar isso)
           if (this.checked) {
             valorAtual += bonusProf;
           } else {
             valorAtual -= bonusProf;
           }
 
+          //valor atual passa a ser o valor do campo de texto respectivo (de novo, falamos aqui de ordem de aparição)
           textPericia[index].value = valorAtual;
-
-          if ((nomemod == "sabedoriamod")&&(index == 3)){
-            if (this.checked) {
-              percep.value = parseInt(percep.value,10) + bonusProf;
-              
-            } else {
-              percep.value = parseInt(percep.value,10) - bonusProf;
-            }
-          }
-
         });
-
       });
     }
 
+    //função semelhante, porém com uma mudança pequena que faz completa diferença: o CONTADOR iniciado fora da função principal
+    //a presença do contador indica a ordem que o campo da habilidade foi preenchida, e isso muda completamente a forma com que é designado os campos de texto e checkbox
+    //por exemplo: ao preencher as habilidades em ordem (força > destreza > constituição...) a atribuição dos campos de texto e checkboxes respectivas estarão corretas.
+    //ao preencher fora de ordem (força > constituição > destreza...) a atribuição das checkboxes respectivas estará errada, sendo assim:
+    //marcando a primeira checkbox: campo de texto 1 (força) ganha proficiência (OK)
+    //marcando a segunda checkbox: campo de texto 3 (constituição) ganha proficiência (ERRADO)
     function atribuiModSalv(){
       Array.from(textSalv).forEach((element, index )=> {
         element.value = valorMod;
+        //basicamente, toda vez que um campo de habilidade é preenchido, é feita uma seleção de todas as checkboxes na área de salvaguardas
         const checkboxes = element.parentNode.querySelectorAll('.check');
+        //aqui é armazenado apenas a checkbox que corresponde ao contador, ou seja, se foi a primeira vez que um campo de habilidade foi alterado, o contador vai ser 0
+        //se foi a segunda vez, o contador vai ser 1
+        //isso possibilita o erro descrito anteriormente, mas foi a solução que encontrei no momento
         let check = checkboxes[contador];
 
         check.addEventListener('change', function () {
           let valorAtual = parseInt(textSalv[index].value, 10) || 0;
          
           if (this.checked) {
-            
             valorAtual += bonusProf;
-            
           } else {
             valorAtual -= bonusProf;
           }
@@ -169,6 +181,11 @@ function mod(elmnt) {
         ++contador;
       });
     }
+
   });
 
 }
+
+const percepMod = document.getElementById('sabedoriamod').value;
+console.log(percepMod)
+
