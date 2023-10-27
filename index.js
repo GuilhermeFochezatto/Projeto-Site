@@ -13,7 +13,7 @@ startButton.addEventListener('click', function() {
     
     /* cria um novo título identico ao anterior*/
     const title = document.createElement("div");
-    title.innerHTML = '<h1 id="titulo">AUTO D&D</h1>';
+    title.innerHTML = '<h1 id="titulo" style="margin-top: 100px; margin-left: 0px">AUTO D&D</h1>';
     homeview.appendChild(title);
 
     /* cria a GUI de login */

@@ -4,6 +4,20 @@ const show = document.getElementsByClassName("show");
 const valor = document.getElementsByClassName("valor");
 const textSalva = document.getElementsByClassName('salv');
 const prof = document.getElementById("bonusprof");
+const armadura = document.getElementById("selecArmadura");
+const ca = document.getElementById("ca");
+
+//atribuindo CA
+armadura.addEventListener('change',function(){
+  classeArmadura(armadura);
+});
+
+document.getElementById("escudo").addEventListener('change',function(){
+  if (this.checked){
+    ca.value = 2 + parseInt(ca.value, 10);
+  }else ca.value = parseInt(ca.value, 10) -2;
+  
+});
 
 //convertendo o valor do Bonus de Proficiencia para Inteiro
 let bonusProf = parseInt(prof.value, 10) || 0;
@@ -107,20 +121,25 @@ function mod(elmnt) {
     const textPericia = document.getElementsByClassName(classePai + 'per');
     const textSalv = document.getElementsByClassName(classePai + 'salv');
     const percep = document.getElementById('percep');
+    const inic = document.getElementById('inic');
 
     document.getElementById(nomemod).value = valorMod;
     atribuiModPer();
     atribuiModSalv();
+
+    if (nomemod == "sabedoriamod"){
+      percep.value = valorMod + 10;
+    }
+
+    if (nomemod == "destrezamod"){
+      inic.value = valorMod;
+    }
       
     function atribuiModPer(){
       Array.from(textPericia).forEach((element, index )=> {
         element.value = valorMod;
         const checkboxes = element.parentNode.querySelectorAll('.check');
         let check = checkboxes[index];
-
-        if (nomemod == "sabedoriamod"){
-          percep.value = valorMod + 10;
-        }
 
         check.addEventListener('change', function () {
           let valorAtual = parseInt(textPericia[index].value, 10) || 0;
@@ -169,6 +188,19 @@ function mod(elmnt) {
         ++contador;
       });
     }
+
   });
+
+}
+
+function classeArmadura(elmnt){
+
+  if((elmnt.value == 'Acolchoada')){
+    document.getElementById("desvCheck").checked = true;
+  }else document.getElementById("desvCheck").checked = false;
+
+  if((elmnt.value == 'Couro') || (elmnt.value == 'Acolchoada')){
+    ca.value = 11 + (parseInt(document.getElementById("destrezamod").value, 10) || 0);
+  }
 
 }

@@ -75,10 +75,17 @@ input[type="text"] {
   width: 30px;
 }
 
+select{
+  background-color: rgba(0, 0, 0, 0.397);
+  border-style: none;
+  font-size: 18px;
+  font-family: fantasy;
+  color: #ffc400;
+}
+
 input[type="number"] {
   background-color: rgba(0, 0, 0, 0.397);
   border-style: none;
-  font-size: 24px;
   font-family: fantasy;
   letter-spacing: 2px;
   margin-top: 5px;

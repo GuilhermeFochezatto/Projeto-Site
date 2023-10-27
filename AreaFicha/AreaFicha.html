@@ -18,6 +18,26 @@
         <li><a class="nav-button" href="">BOTAO 1</a></li>
         <li><a class="nav-button" href="">BOTAO 1</a></li>
         </ul>
+
+        <div style="width: 40vw; background-color: transparent;"></div>
+
+        <div style="display:flex; background-color: transparent; align-items: baseline; margin-top: 10px;">
+            <div style="background-color: transparent; margin-right: 20px;">
+                <h2>INSPIRAÇÃO</h2>
+                <br>
+                <input type="number" value="0" style="background-color: inherit; width: 100px; margin: -5px;">
+            </div>
+        
+            <div style="background-color: transparent; margin-right: 20px;">
+                <h2>BÔNUS DE <br>PROFICIÊNCIA</h2>
+                <input type="text" id="bonusprof" value="2" disabled style="background-color: inherit;">
+            </div>
+            
+            <div style="background-color: transparent; ">
+                <h2>PERCEPÇÃO <br>PASSIVA</h2>
+                <input type="text" id="percep" disabled style="background-color: inherit;">
+            </div>
+        </div>
     </div>
     
     <!--div responsável por: barra de atributos-->
@@ -191,39 +211,47 @@
         <input type="button" value="---" class="hidden">
     </div>
 
-    <!--div responsável por: OUTROS -->
-    <div class="dragarea" id="OUTROS" style="left: 370px; top: 836px; padding: 0.5em;" >
-        <input type="button" value="Mostrar" class="show">
-
-        <div style="background-color: transparent; ">
-            <h2>INSPIRAÇÃO</h2>
-            <input type="number" value="0">
-        </div>
-
-        <div style="background-color: transparent; ">
-            <h2>BÔNUS DE <br>PROFICIÊNCIA</h2>
-            <input type="text" id="bonusprof" value="2" disabled>
-        </div>
-
-        <div style="background-color: transparent; ">
-            <h2>PERCEPÇÃO <br>PASSIVA</h2>
-            <input type="text" id="percep">
-        </div>
-
-        <input type="button" value="---" class="hidden" style="grid-row: 3; grid-column-start: 2; ">
-    </div>
-
     <!--div responsável por: COMBATE -->
-    <div class="dragarea" id="COMBATE" style="left: 546px; top: 100px; padding: 0.5em;" >
+    <div class="dragarea" id="COMBATE" style="left: 546px; top: 100px; padding: 0.5em; align-items: center;" >
         <input type="button" value="Mostrar" class="show">
         <div style="background-color: transparent; ">
             <h2>INICIATIVA</h2>
-            <input type="text" disabled>
+            <input type="text" id="inic" disabled>
         </div>
 
         <div style="background-color: transparent; ">
             <h2>CLASSE DE <br> ARMADURA </h2>
-            <input type="text">
+            <input type="text" id="ca" disabled value="0">
+            <br>
+            <input type="checkbox" id="desvCheck" style="pointer-events: none;">
+            <label for="checkbox" >Desvant.</label>
+            <input type="checkbox" id="escudo">
+            <label for="checkbox">Escudo</label>
+            <br>
+            <select id="selecArmadura" size="1" style="margin-top: 5px;">
+                <option label="" selected="selected" value="2" disabled ></option>
+                <optgroup label="Leves" disabled="disabled" style="color: black;"></optgroup>
+                    <option label="Acolchoada" value="Acolchoada" ></option>
+                    <option label="Couro" value="Couro" ></option>
+                    <option label="Couro Batido" value="Couro Batido" ></option>
+                <outgroup>  
+                <optgroup label="Medias" disabled="disabled" style="color: black;"></optgroup>
+                    <option label="Gibão de Pele" value="Gibão de Pele" ></option>
+                    <option label="Camisão de Malha" value="Camisão de Malha" ></option>
+                    <option label="Brunea" value="Brunea" ></option>
+                    <option label="Peitoral" value="Peitoral" ></option>
+                    <option label="Meia-Armadura" value="Meia-Armadura" ></option>
+                <outgroup>  
+                <optgroup label="Pesadas" disabled="disabled" style="color: black;"></optgroup>
+                    <option label="Cota de Anéis" value="Cota de Anéis" ></option>
+                    <option label="Cota de Malha" value="Cota de Malha" ></option>
+                    <option label="Cota de talas" value="Cota de talas" ></option>
+                    <option label="Placas" value="Placas" ></option>
+                <outgroup> 
+                <optgroup label="Especial" disabled="disabled" style="color: black;"></optgroup>
+                    <option label="Especial" value="especial" ></option>
+                <outgroup>
+            </select>
         </div>
 
         <div style="background-color: transparent; ">
